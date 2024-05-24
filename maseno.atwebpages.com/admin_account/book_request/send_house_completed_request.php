@@ -1,0 +1,25 @@
+<?php
+
+include("../../database/database.php");
+
+$book_code =$_POST['book_code'];
+$query =mysqli_query($conn,"UPDATE book_house SET status ='YES' WHERE book_code ='{$book_code}'");
+
+
+
+if($query){
+
+    echo "Order Completed";
+}else{
+
+
+    echo "Error";
+
+}
+
+
+
+
+
+
+?>
